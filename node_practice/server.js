@@ -1,8 +1,16 @@
-/* var rect = {
-    perimeter: (x,y) => 2*(x+y),
-    area: (x,y) => x*y
-} */
+const http = require ("http");
 
-var rect = require("./rectangle")
+const hostname = "localhost";
+const port = 3000;
 
-console.log("Perimeter of 3 and 5 is >> " + rect.perimeter(3,5));
+const server = http.createServer((req, res) => {
+    console.log(req.headers);
+    res.statusCode = 200;
+    res.setHeader("Content-Type", "text/html");
+    res.end(`<html>Hello World</html>`);
+});
+
+server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}`);
+})
+
