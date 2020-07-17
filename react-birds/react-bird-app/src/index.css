@@ -60,8 +60,7 @@ header {
 
 h1,
 h3 {
-  margin: 0;
-  color: var(--almost-white);
+  margin: auto;
   text-shadow: var(--text-shadows);
 }
 
@@ -133,4 +132,27 @@ tr:nth-child(even) {
 
 tr:nth-child(odd) {
   color: var(--grey-blue);
+}
+
+.deleteBird{
+  margin-left:10px;
+  background-color: black;
+  color:white;
+  border:none;
+}
+
+#approveToggle{
+  background-color: green;
+  color:white;
+  border:none;
+}
+
+#admin{
+  background-color: purple;
+  margin:auto;
+  margin-top:5px;
+  text-align: center;
+  width:100px;
+  color:white;
+  border:none;
 }
