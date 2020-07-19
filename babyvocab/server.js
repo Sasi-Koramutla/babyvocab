@@ -38,19 +38,19 @@ mongoose.connect(mongodbURI, { useNewUrlParser: true, useFindAndModify: false}, 
       console.log('connected to mongo');
   });
 
-/* // User controller
+// User controller
 const userController = require('./controllers/users.js');
 app.use('/users', userController); 
 
 // Session controller
 const sessionController = require('./controllers/sessions.js');
-app.use('/sessions', sessionController); */
+app.use('/sessions', sessionController);
 
 
 //get route
 app.get("/", (req, res) => {
-    res.send("Hello");
-    //res.render("welcome.ejs");
+    //res.send("Hello");
+    res.render("login.ejs");
 });
 // the app running the server
 app.listen(PORT, () => {
